@@ -82,20 +82,21 @@ test_cases = [  # pylint: disable=invalid-name
 print "Using first solution"
 
 for test_case in test_cases:
+
+    print "Using first solution"
+
     solution1 = Solution1()
     jumps = solution1.jump(test_case)
     print "%s --> %s" % (test_case, jumps)
 
-print "Using second solution"
+    print "Using second solution"
 
-for test_case in test_cases:
     solution2 = Solution2()
     jumps = solution2.jump(test_case)
     print "%s --> %s" % (test_case, jumps)
 
-print "Using third solution"
+    print "Using third solution"
 
-for test_case in test_cases:
     solution3 = Solution3()
     jumps = solution3.jump(test_case)
     print "%s --> %s" % (test_case, jumps)
