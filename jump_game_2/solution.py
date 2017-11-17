@@ -55,6 +55,17 @@ class Solution2(object):
             stop_at -= 1
 
 
+class Solution3(object):
+    """ Third solution """
+
+    def jump(self, nums):
+        jumps = last_index = next_index = 0
+        while next_index < len(nums) - 1:
+            jumps += 1
+            last_index, next_index = next_index, max(i + nums[i] for i in xrange(last_index, next_index + 1))
+        return jumps
+
+
 test_cases = [  # pylint: disable=invalid-name
     [2, 3, 1, 1, 4],
     [12, 3, 1, 1, 4],
@@ -76,4 +87,11 @@ print "Using second solution"
 for test_case in test_cases:
     solution2 = Solution2()
     jumps = solution2.jump(test_case)
+    print "%s --> %s" % (test_case, jumps)
+
+print "Using third solution"
+
+for test_case in test_cases:
+    solution3 = Solution3()
+    jumps = solution3.jump(test_case)
     print "%s --> %s" % (test_case, jumps)
