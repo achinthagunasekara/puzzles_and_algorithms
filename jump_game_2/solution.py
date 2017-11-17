@@ -55,15 +55,19 @@ class Solution2(object):
             stop_at -= 1
 
 
-class Solution3(object):
+class Solution3(object):  # pylint: disable=too-few-public-methods
     """ Third solution """
 
-    def jump(self, nums):
-        jumps = last_index = next_index = 0
+    def jump(self, nums):  # pylint: disable=no-self-use
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        num_jumps = last_index = next_index = 0
         while next_index < len(nums) - 1:
-            jumps += 1
-            last_index, next_index = next_index, max(i + nums[i] for i in xrange(last_index, next_index + 1))
-        return jumps
+            num_jumps += 1
+            last_index, next_index = next_index, max(i + nums[i] for i in xrange(last_index, next_index + 1))  # pylint: disable=line-too-long
+        return num_jumps
 
 
 test_cases = [  # pylint: disable=invalid-name
