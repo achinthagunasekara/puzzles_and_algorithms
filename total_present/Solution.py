@@ -30,18 +30,19 @@ class Solution(object):
         """
         for i, num_one in enumerate(nums):
             for j, num_two in enumerate(nums):
-                if num_one + num_two == target:
+                if num_one + num_two == target and i != j:
                     return [i, j]
 
 
 test_cases = [  # pylint: disable=invalid-name
-    [[4, 2, 3], 5],
-    [[2, 7, 11, 15], 9],
-    [[2, 7, 11, 15], 12],
-    [[2, 7, 11, 12], 23],
-    [[2, 7, -26, 50], 24],
-    [[2, 7, -11, 6], -5],
-    [[2, 7, 5, 15], 7],
+      [[4, 2, 3], 5],
+      [[3, 2, 4], 6],
+      [[2, 7, 11, 15], 9],
+      [[2, 7, 11, 15], 12],
+      [[2, 7, 11, 12], 23],
+      [[2, 7, -26, 50], 24],
+      [[2, 7, -11, 6], -5],
+      [[2, 7, 5, 15], 7],
 ]
 
 for test_case in test_cases:
