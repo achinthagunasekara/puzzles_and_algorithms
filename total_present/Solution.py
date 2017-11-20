@@ -35,6 +35,7 @@ class Solution(object):
 
 
 test_cases = [  # pylint: disable=invalid-name
+    [[4, 2, 3], 5],
     [[2, 7, 11, 15], 9],
     [[2, 7, 11, 15], 12],
     [[2, 7, 11, 12], 23],
