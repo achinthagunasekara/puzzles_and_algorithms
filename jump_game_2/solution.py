@@ -79,8 +79,6 @@ test_cases = [  # pylint: disable=invalid-name
     [3, 1, 1, 1, 4]
 ]
 
-print "Using first solution"
-
 for test_case in test_cases:
 
     print "Using first solution"
