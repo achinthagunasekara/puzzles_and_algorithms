@@ -6,11 +6,11 @@ A queen is standing on an n x n chessboard. The chessboard's rows are numbered f
 
 The queen is standing at position (rq, cq) and, in a single move, she can attack any square in any of the eight directions (left, right, up, down, or the four diagonals). In the diagram below, the green circles denote all the cells the queen can attack from (4, 4).
 
-![alt text][images/1.png]
+![Image 1][https://raw.githubusercontent.com/achinthagunasekara/puzzles_and_algorithms/master/Queens_Attack_II/images/1.png]
 
 There are k obstacles on the chessboard preventing the queen from attacking any square that has an obstacle blocking the the queen's path to it. For example, an obstacle at location (3, 5) in the diagram above would prevent the queen from attacking cells (3, 5), (2, 6) and (1, 7):
 
-![alt text][images/2.png]
+![Image 2][https://raw.githubusercontent.com/achinthagunasekara/puzzles_and_algorithms/master/Queens_Attack_II/images/2.png]
 
 Given the queen's position and the locations of all the obstacles, find and print the number of squares the queen can attack from her position at (rq, cq).
 
