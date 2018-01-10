@@ -44,21 +44,20 @@ int main()
 
 lines_without_comments = []
 
-with open('main.c') as code_file:
+with open('test.txt') as code_file:
     ignore_next_line = False
     for line in code_file:
         # Skip lines starting with //
         if not re.match(r' *//.*', line):
-            # Catch lines starting with /*
-            if re.match(r' */\*.*', line):
-                # catch multiline comments
-                if re.match(r'.*\*/ *', line):
-                    ignore_next_line = False
-                else:
-                    ignore_next_line = True
-                line = re.sub(r' */\*.*', '', line)
-            if line and not ignore_next_line:
-                lines_without_comments.append(line)
+            # Catch multiline comments
+            cleaned_line = re.sub(r'/\*.*', '', line)
+            cleaned_line = re.sub(r'.*\*/', '', cleaned_line)
+            if cleaned_line and not ignore_next_line:
+                lines_without_comments.append(cleaned_line)
+            if re.match(r'.*/\*.*', line) and not re.match(r'.*\*/.*', line):
+                ignore_next_line = True
+            else:
+                ignore_next_line = False
 
 for line in  lines_without_comments:
     print line
