@@ -34,7 +34,7 @@ def get_emp_details(emp_id):
         }
     elif emp_id == 'A1234567898':
         return {
-            "name": "Pter Parker",
+            "name": "Peter Parker",
             "title": "Tester",
             "reports": []
         }
