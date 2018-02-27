@@ -44,7 +44,7 @@ def get_sub_strings(input_string, current_index=0):
 
 
 
-def print_data_structure(strucutre):
+def print_data_structure(strucutre, previous_structure=None):
     """
     Print the data structure.
     Args:
@@ -53,9 +53,14 @@ def print_data_structure(strucutre):
         None
     """
     for key, data_items in strucutre.iteritems():
-        print key
-        if data_items:
-            print_data_structure(data_items)
+        if previous_structure:
+            current_structure = "%s%s" % (previous_structure, get_a_to_z()[key])
+        else:
+            current_structure = get_a_to_z()[key]
+        if data_items is None:
+            print current_structure
+        else:
+            print_data_structure(data_items, previous_structure=current_structure)
 
 
 INPUT_STRINGS = [
@@ -65,5 +70,3 @@ INPUT_STRINGS = [
 for each_string in INPUT_STRINGS:
     data = get_sub_strings(input_string=each_string)
     print_data_structure(strucutre=data)
-
-#print get_a_to_z()
