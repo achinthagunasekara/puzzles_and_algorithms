@@ -20,7 +20,7 @@ def get_a_to_z():
     return chars
 
 
-def get_sub_strings(input_string, current_index=0):
+def generate_all_possible_combinations(input_string, current_index=0):  # pylint: disable=invalid-name
     """
     Take a input string of numbers and decode it to see what strings,
     it could represent.
@@ -35,10 +35,12 @@ def get_sub_strings(input_string, current_index=0):
     if current_index < (len(input_string) - 1):
         double_digits = int("%s%s" % (input_string[current_index], input_string[current_index + 1]))
         if double_digits <= 26:
-            sub_tree = get_sub_strings(current_index=(current_index + 2), input_string=input_string)
+            sub_tree = generate_all_possible_combinations(current_index=(current_index + 2),
+                                                          input_string=input_string)
             tree[double_digits] = sub_tree
 
-    sub_tree = get_sub_strings(current_index=(current_index + 1), input_string=input_string)
+    sub_tree = generate_all_possible_combinations(current_index=(current_index + 1),
+                                                  input_string=input_string)
     tree[int(input_string[current_index])] = sub_tree
     return tree
 
@@ -68,5 +70,5 @@ INPUT_STRINGS = [
 ]
 
 for each_string in INPUT_STRINGS:
-    data = get_sub_strings(input_string=each_string)
+    data = generate_all_possible_combinations(input_string=each_string)
     print_data_structure(strucutre=data)
