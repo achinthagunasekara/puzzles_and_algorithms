@@ -20,6 +20,9 @@ def get_a_to_z():
     return chars
 
 
+LETTERS = get_a_to_z()
+
+
 def generate_all_possible_combinations(input_string, current_index=0):  # pylint: disable=invalid-name
     """
     Take a input string of numbers and decode it to see what strings,
@@ -56,9 +59,9 @@ def print_data_structure(strucutre, previous_structure=None):
     """
     for key, data_items in strucutre.iteritems():
         if previous_structure:
-            current_structure = "%s%s" % (previous_structure, get_a_to_z()[key])
+            current_structure = "%s%s" % (previous_structure, LETTERS[key])
         else:
-            current_structure = get_a_to_z()[key]
+            current_structure = LETTERS[key]
         if data_items is None:
             print current_structure
         else:
