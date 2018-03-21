@@ -14,7 +14,7 @@ def build_list(number):
     return int_list
 
 
-def get_jumping_numbers(number, current_digit=0, index=0):
+def get_jumping_numbers(number, current_digit=-1, index=0):
     jumping_numbers = []
     integer_list = build_list(number=number)
     while index < len(integer_list):
