@@ -1,11 +1,20 @@
+#!/usr/local/bin/python
+
 """
 Find jumping numbers.
 """
 
 
 def get_jumping_numbers(orgianl_number, input_int, results):
-    """ Get jumping numbers """
-
+    """
+    Get all possible jumping numbers for a given integer.
+    Args:
+        orgianl_number (int): Orginal input numbers to search for jumping numbers in.
+        input_int (int): Current int to search jumping numbers for.
+        results (list): List to append any jumping numbers found.
+    Returns:
+        results (list): List of found jumping numbers.
+    """
     if input_int <= orgianl_number:
         num_list = map(int, str(input_int))
         minus_list = list(num_list)
@@ -32,13 +41,26 @@ def get_jumping_numbers(orgianl_number, input_int, results):
         get_jumping_numbers(orgianl_number=orgianl_number, input_int=new_int, results=results)
     return results
 
+def get_jumping_nums_for_a_number(number):
+    """
+    Get all jumping numbers for a number.
+    Args:
+        number (int): Integer to check jumping numbers for.
+    Returns:
+        list: List of jumping numbers for the given integer.
+    """
+    output = []
+    for each_int in range(number + 1):
+        get_jumping_numbers(orgianl_number=number, input_int=each_int, results=output)
+    return output
+
 
 if __name__ == '__main__':
-    INPUT = [
-        35
+    INPUT_INTS = [
+        10,
+        35,
+        50,
+        54
     ]
-    output = []
-    for integer in INPUT:
-        for each_int in range(integer + 1):
-            get_jumping_numbers(orgianl_number=integer, input_int=each_int, results=output)
-    print output
+    for integer in INPUT_INTS:
+        print "%s ==> %s" % (integer, get_jumping_nums_for_a_number(number=integer))
