@@ -3,39 +3,42 @@ Find jumping numbers.
 """
 
 
-def get_jumping_numbers(orgianl_number, input_int, position=0):
+def get_jumping_numbers(orgianl_number, input_int, results):
     """ Get jumping numbers """
-    num_list = map(int, str(input_int))
-    if len(num_list) > position and num_list[position] > 0:
-        try:
-            jumping_number_less = int("%s%s" % (num_list[position], (num_list[position] - 1)))
-            print "POS %s POS - 1 %s and %s" % (num_list[position], (num_list[position] - 1), jumping_number_less)
-            if jumping_number_less >= 0 and jumping_number_less <= orgianl_number:
-                print "LESS %s" % jumping_number_less
-        except ValueError:
-            # do nothing
-            pass
-        jumping_number_more = int("%s%s" % (num_list[position], (num_list[position] + 1)))
-        if jumping_number_more >= 0 and jumping_number_more <= orgianl_number:
-            print "more %s" % jumping_number_more
-        position += 1
-        get_jumping_numbers(orgianl_number=orgianl_number, input_int=input_int, position=position)
 
+    if input_int <= orgianl_number:
+        num_list = map(int, str(input_int))
+        minus_list = list(num_list)
+        plus_list = list(num_list)
 
-def check_each_num(input_int):
-    """ Get jumping numbers """
-    for each_int in range(input_int + 1):
-        position = 0
-        if each_int < 10:
-            print "input %s" % each_int
-            print "++++++++++++"
-        get_jumping_numbers(orgianl_number=input_int, input_int=each_int, position=position)
+        if len(num_list) == 1:
+            results.append(num_list[0])
+
+        minus = plus_list[len(plus_list) - 1] - 1
+        if minus >= 0:
+            minus_list.append(minus)
+            new_int = reduce(lambda x, y: str(x)+str(y), minus_list)
+            if int(new_int) <= orgianl_number:
+                results.append(new_int)
+            get_jumping_numbers(orgianl_number=orgianl_number, input_int=new_int, results=results)
+
+        plus = plus_list[len(plus_list) - 1] + 1
+        plus = plus if plus < 10 else 1
+        plus_list.append(plus)
+        new_int = reduce(lambda x, y: str(x)+str(y), plus_list)
+        if int(new_int) <= orgianl_number:
+            if not new_int.startswith("0"):
+                results.append(new_int)
+        get_jumping_numbers(orgianl_number=orgianl_number, input_int=new_int, results=results)
+    return results
 
 
 if __name__ == '__main__':
     INPUT = [
-        12
+        35
     ]
+    output = []
     for integer in INPUT:
-        print check_each_num(input_int=integer)
-        print '======'
+        for each_int in range(integer + 1):
+            get_jumping_numbers(orgianl_number=integer, input_int=each_int, results=output)
+    print output
