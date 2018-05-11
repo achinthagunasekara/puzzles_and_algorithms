@@ -33,7 +33,7 @@ def generate_all_possible_combinations(input_string, current_index=0):  # pylint
         Dictionary: Dictionary of strings the input string could represent.
     """
     if current_index >= len(input_string):
-        return
+        return None
     tree = {}
     if current_index < (len(input_string) - 1):
         double_digits = int("%s%s" % (input_string[current_index], input_string[current_index + 1]))
