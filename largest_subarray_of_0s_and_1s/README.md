@@ -14,3 +14,15 @@ For each test case output in a new line the max length of the subarray .
 * 1<=T<=100
 * 1<=N<=100
 * 0<=A[ ] <=1
+
+## Example
+```
+Input: arr[] = {1, 0, 1, 1, 1, 0, 0}
+Output: 1 to 6 (Starting and Ending indexes of output subarray)
+
+Input: arr[] = {1, 1, 1, 1}
+Output: No such subarray
+
+Input: arr[] = {0, 0, 1, 1, 0}
+Output: 0 to 3 Or 1 to 4
+```
