@@ -34,4 +34,4 @@ if __name__ == '__main__':
         23224
     ]
     for each_input in INPUT:
-        print find_closest_palindrome(number=each_input)
+        print "%s => %s" % (each_input, find_closest_palindrome(number=each_input))
