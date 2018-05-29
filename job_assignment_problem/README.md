@@ -22,18 +22,18 @@ For each test case in a new line, print the time taken in the best possible assi
 ### Input
 
 ```
-2
-2
-3 5 10 1
-3
-2 1 2 9 8 1 1 1 1
+Enter the number of test cases: 2
+Enter the number of people: 2
+Enter the efficiency for each person for each job: 3 5 10 1
+Enter the number of people: 3
+Enter the efficiency for each person for each job: 2 1 2 9 8 1 1 1 1
 ```
 
 ### Output
 
 ```
-4
-3
+INFO:solution:Minimum time to do the job for test case 0 is: 
+INFO:solution:Minimum time to do the job for test case 1 is: 3
 ```
 
 ### Explanation
