@@ -2,42 +2,31 @@
 
 
 INPUT = [
-    [1, 6, 5, 11],
-    [36, 7, 46, 40]
+    [1, 6, 5, 11], # (1+5+6) - (11)
+    [36, 7, 46, 40] # (46+7) - (36+40)
 ]
 
 
 if __name__ == '__main__':
     for each_list in INPUT:
-
-        #print "Processing list %s" % each_list
         each_list.sort()
-        print "Processing list %s" % each_list
+        min_diff = None
+        total_one = None
+        total_two = None
 
-        first_sub_list_total = 0
-        min_difference = None
-        min_split_index = None
+        for index, each_from_start in enumerate(each_list):
+            if index < len(each_list) - 1:
+                if total_one:
+                    total_one += each_from_start
+                else:
+                    total_one = each_list[-1] + each_from_start
 
-        for outter_index, each_element in enumerate(each_list):
-            second_sub_list_total = 0
-            first_sub_list_total += each_element
+                total_two = sum(each_list[index + 1:len(each_list) - 1])
+                current_diff = abs(total_one - total_two)
 
-
-            for inner_index in range(outter_index + 1, len(each_list)):
-                second_sub_list_total += each_list[inner_index]
-
-            current_difference = abs(first_sub_list_total - second_sub_list_total)
-            print current_difference
-
-            if not min_difference:
-                min_difference = current_difference
-                min_split_index = outter_index + 1
-
-            if current_difference < min_difference:
-                min_difference = current_difference
-                min_split_index = outter_index + 1
-
-        print "List can be split as %s and %s" % (each_list[:min_split_index],
-                                                  each_list[min_split_index:])
-        print "Difference between two lists is %s" % min_difference
-        print "=================================="
+                if not min_diff:
+                    min_diff = current_diff
+                else:
+                    if min_diff > current_diff:
+                        min_diff = current_diff
+        print min_diff
