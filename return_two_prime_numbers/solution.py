@@ -2,6 +2,8 @@
 Solution to return two prime numbers puzzle.
 """
 
+PRIME_NUMBERS = []
+
 if __name__ == '__main__':
     INTEGERS = [
         5,
