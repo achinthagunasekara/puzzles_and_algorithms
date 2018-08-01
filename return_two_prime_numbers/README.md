@@ -4,8 +4,6 @@ Given an even number ( greater than 2 ), return two prime numbers whose sum will
 
 NOTE: A solution will always exist, read Goldbach’s conjecture.
 
-Also, solve the problem in linear time complexity, i.e., O(n).
-
 ## Input
 
 The first line contains T, the number of test cases. The following T lines consist of a number each, for which we'll find two prime numbers.
@@ -29,7 +27,6 @@ For every test case print two prime numbers space separated, such that the small
 ### Input
 
 ```
-5
 74
 1024
 66 
