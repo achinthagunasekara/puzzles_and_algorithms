@@ -10,6 +10,8 @@ A : [3 5 4 2]
 
 ### Output
 
+```
 2
+```
 
 for the pair (3, 5)
