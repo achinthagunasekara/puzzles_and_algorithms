@@ -4,7 +4,9 @@ Given an array A of integers, find the maximum of j - i subjected to the constra
 
 ## Example
 
+```
 A : [3 5 4 2]
+```
 
 Output : 2
 
