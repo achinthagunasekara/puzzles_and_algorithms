@@ -16,6 +16,6 @@ We can see that john1985, John and john123 are the same person by their contact 
 
 ### Output
 
-0,2,3 are the same person and 1 is another one
+0, 2, 3 are the same person and 1 is another one
 
 [[ 0, 2, 3], [1]]
