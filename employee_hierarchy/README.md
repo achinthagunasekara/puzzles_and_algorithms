@@ -12,7 +12,7 @@ Write a function that will take an employee ID and print out the entire hierarch
 
 For example, suppose that Flynn Mackie's employee id is 'A123456789' and his only direct reports are Wesley Thomas and Nina Chiswick. If you provide 'A123456789' as input to your function, you will see the sample output below.
 
-```python
+```
 -----------Begin Sample Output--------------
 Flynn Mackie - Senior VP of Engineering
   Wesley Thomas - VP of Design
