@@ -16,6 +16,8 @@ def change_letters(string):
 
 
 STRINGS = [
+    'hello*3',
+    'fun times!'
 ]
 
 
