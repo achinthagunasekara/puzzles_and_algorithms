@@ -23,4 +23,4 @@ STRINGS = [
 
 if __name__ == '__main__':
     for each_string in STRINGS:
-        print change_letters(string=each_string)
+        print "{0} ==> {1}".format(each_string, change_letters(string=each_string))
