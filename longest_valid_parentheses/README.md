@@ -17,7 +17,7 @@ Explanation: ()()
 ```
 
 ```
-Input:  ()(()))))
+Input: ()(()))))
 Output: 6
 Explanation:  ()(())
 ```
