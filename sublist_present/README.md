@@ -13,8 +13,9 @@ input_1 = [1, 2, 3, 1, 2, 3]
 input_2 = [2, 3]
 ```
 
+```
 Above should return 4
-
+```
 
 ```python
 input_1 = [1, 2, 3, 1, 5, 3]
