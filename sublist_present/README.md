@@ -6,6 +6,8 @@ First list may or may not contain the second list.
 
 We need to find out if the first list contain the second list and find the largest index where second list begins, if the first list contain the second list more than once.
 
+## Example
+
 ```python
 input_1 = [1, 2, 3, 1, 2, 3]
 input_2 = [2, 3]
