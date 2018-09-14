@@ -3,9 +3,13 @@
 
 If a=1, b=2, c=3,….z=26. Given a string, find all possible codes that string can generate. Give a count as well as print the strings.
 
-For example:
+## example
 
-Input: “1123″. You need to general all valid alphabet codes from this string.
+```
+Input: “1123″.
+```
+
+You need to general all valid alphabet codes from this string.
 
 ```
 Output List
