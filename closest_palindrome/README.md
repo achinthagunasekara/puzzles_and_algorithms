@@ -22,7 +22,7 @@ Note:  If the difference of two closest palindromes numbers is equal then we pri
 489
 ```
 
-## output
+### output
 
 ```
 8
