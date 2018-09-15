@@ -15,7 +15,7 @@ Note:  If the difference of two closest palindromes numbers is equal then we pri
 
 ## Example
 
-## Input
+### Input
 
 ```
 9
