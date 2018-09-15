@@ -6,7 +6,7 @@ The difference between ‘9’ and ‘0’ is not considered as 1. All single di
 
 For example 7, 8987 and 4343456 are Jumping numbers but 796 and 89098 are not.
 
-E.G
+## Example
 
 Input:
 
