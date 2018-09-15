@@ -17,5 +17,7 @@ For example 7, 8987 and 4343456 are Jumping numbers but 796 and 89098 are not.
 
 ### Output
 
+```
 * 0 1 10 2 3 4 5 6 7 8 9
 * 0 1 10 12 2 21 23 3 32 34 4 43 45 5 6 7 8 9
+```
