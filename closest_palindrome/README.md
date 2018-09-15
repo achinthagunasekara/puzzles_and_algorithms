@@ -13,6 +13,8 @@ Note:  If the difference of two closest palindromes numbers is equal then we pri
 * 1<=T<=1000
 * 1<=n<=10^14
 
+## Example
+
 ## Input
 
 ```
