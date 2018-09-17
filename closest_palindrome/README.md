@@ -13,20 +13,24 @@ Note:  If the difference of two closest palindromes numbers is equal then we pri
 * 1<=T<=1000
 * 1<=n<=10^14
 
-## Input
+## Example
+
+### Input
 
 ```
 9
 489
 ```
 
-## output
+### output
 
 ```
 8
 484
 ```
 
-## Explanation
+### Explanation
 
-Test Case 1: closest palindrome number is 8.
+#### Test Case 1
+
+closest palindrome number is 8.
