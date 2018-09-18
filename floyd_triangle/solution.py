@@ -24,19 +24,19 @@ def print_traingle(number):
         number (int): Number entered by the user.
     Returns:
     """
-    previous_count = 1
+    numbers_in_previous_line = 1
     line_number = 0
     integer = 1
     output = ''
     while True:
-        current_count = 1
+        numbers_in_current_line = 1
         while True:
-            if current_count == previous_count + 1:
+            if numbers_in_current_line == numbers_in_previous_line + 1:
                 output = "{0}{1}".format(output, '\n')
-                previous_count = current_count
+                numbers_in_previous_line = numbers_in_current_line
                 break
             output = "{0} {1}".format(output, integer)
-            current_count += 1
+            numbers_in_current_line += 1
             integer += 1
         line_number += 1
         if line_number == number:
