@@ -2,7 +2,9 @@
 
 This script is written to remove comments from a given C file.
 
-Example:
+## Example:
+
+### Input File
 
 ```
 // Remove comments from main.c file
@@ -17,7 +19,7 @@ And more comments
 }
 ```
 
-Expected output:
+### Expected output:
 
 ```
 int main()
