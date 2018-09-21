@@ -17,7 +17,8 @@ def find_the_uncoupled_integer(string):
     Returns:
         int: Uncoupled integer.
     """
-    return string
+    int_list = map(int, string.split(','))
+    return int_list
 
 
 if __name__ == '__main__':
