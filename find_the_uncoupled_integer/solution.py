@@ -9,5 +9,17 @@ TEST_CASES = [
 ]
 
 
+def find_the_uncoupled_integer(string):
+    """
+    Find the Uncoupled Integer in a given string.
+    Args:
+        string (str): Input string to process.
+    Returns:
+        int: Uncoupled integer.
+    """
+    return string
+
+
 if __name__ == '__main__':
-    pass
+    for each_test_case in TEST_CASES:
+        print find_the_uncoupled_integer(string=each_test_case)
