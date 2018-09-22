@@ -21,8 +21,11 @@ For each test case output in a new line the max length of the subarray .
 
 ## Example
 
+### Input
 ```
 Input: arr[] = {1, 0, 1, 1, 1, 0, 0}
+```
+
 Output: 1 to 6 (Starting and Ending indexes of output subarray)
 
 Input: arr[] = {1, 1, 1, 1}
