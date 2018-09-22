@@ -45,6 +45,14 @@ Input: arr[] = {1, 1, 1, 1}
 Output: No such subarray
 ```
 
+### Input
+
+```
 Input: arr[] = {0, 0, 1, 1, 0}
+```
+
+### Output
+
+```
 Output: 0 to 3 Or 1 to 4
 ```
