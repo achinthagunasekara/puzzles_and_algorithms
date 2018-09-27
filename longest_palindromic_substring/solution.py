@@ -14,11 +14,16 @@ def find_longest_palindromic_substr(string):
         str: Logest palindromic substring in the given string.
     """
     logger = logging.getLogger('solution.find_longest_palindromic_substr')
+    palindromes = []
     logger.info("Provided string is %s", string)
+    str_list = list(string)
+    print str_list
 
 
 INPUTS = [
-    'abwesdabcdeffedcbaaddsd'
+    'abwesdabcdeffedcbaaddsd',
+    'abbaasua8723bgajag',
+    '12345678abba12345678'
 ]
 
 
