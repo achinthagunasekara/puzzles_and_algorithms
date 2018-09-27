@@ -24,4 +24,5 @@ INPUTS = [
 
 if __name__ == '__main__':
     for each_input in INPUTS:
+        logging.basicConfig(level=logging.INFO)
         print find_longest_palindromic_substr(string=each_input)
