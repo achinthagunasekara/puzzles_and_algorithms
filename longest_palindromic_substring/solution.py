@@ -23,7 +23,8 @@ def find_longest_palindromic_substr(string):
 INPUTS = [
     'abwesdabcdeffedcbaaddsd',
     'abbaasua8723bgajag',
-    '12345678abba12345678'
+    '12345678abba12345678',
+    '00000sssrader343434121'
 ]
 
 
