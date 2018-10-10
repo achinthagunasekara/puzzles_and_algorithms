@@ -7,7 +7,7 @@ Given an array of distinct integers and a sum value. Find count of triplets with
 ### Input
 
 ```
-arr[] = {-2, 0, 1, 3}
+list = [-2, 0, 1, 3]
 sum = 2
 ```
 
@@ -28,7 +28,7 @@ Below are triplets with sum less than 2
 ### Input
 
 ```
-arr[] = {5, 1, 3, 4, 7}
+list = [5, 1, 3, 4, 7]
 sum = 12.
 ```
 
