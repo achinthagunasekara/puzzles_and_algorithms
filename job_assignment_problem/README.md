@@ -12,9 +12,9 @@ For each test case in a new line, print the time taken in the best possible assi
 
 ## Constrains:
 
-* 1<=T<=100
-* 1<=N<=30
-* 1<=Time taken to do a job <=100
+* 1 <= T <= 100
+* 1 <= N <= 30
+* 1 <= Time taken to do a job <= 100
 
 
 ## Example
