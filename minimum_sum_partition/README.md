@@ -36,5 +36,5 @@ In each seperate line print minimum absolute difference.
 
 ### Explaination
 
-* Subset1 = {1, 5, 6}, sum of Subset1 = 12
-* Subset2 = {11}, sum of Subset2 = 11
+* Subset1 = `{1, 5, 6}`, sum of Subset1 = `12`
+* Subset2 = `{11}`, sum of Subset2 = `11`
