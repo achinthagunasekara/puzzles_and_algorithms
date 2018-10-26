@@ -23,4 +23,5 @@ TEST_CASES = [
 
 
 if __name__ == '__main__':
-    pass
+    for test_case in TEST_CASES:
+        print("{0} ==> {1}".format(test_case, find_two_cubes(integer=test_case)))
