@@ -3,6 +3,20 @@ Find numbers represented as sum of two cubes for two different pairs - Techie De
 """
 
 
+def is_cube(integer):
+    """
+    Check if a given integer is a prefect cube of something.
+    Args:
+        integer: Number to check if it's a cube.
+    Returns:
+        int: Cube root of the number. If not a prefect cube, this will return None.
+    """
+    cube_root = integer ** (1./3.)
+    if round(cube_root) ** 3 == integer:
+        return cube_root
+    return None
+
+
 def find_two_cubes(integer):
     """
     Find numbers represented as sum of two cubes for two different pairs.
@@ -11,14 +25,15 @@ def find_two_cubes(integer):
     Returns:
         tuple: Two integers who's cubes will make up the orginal integer.
     """
-    pass
+    for first_part in range(integer):
+        print first_part
 
 
 TEST_CASES = [
     1729,
-    4104,
-    13832,
-    20683
+    #4104,
+    #13832,
+    #20683
 ]
 
 
