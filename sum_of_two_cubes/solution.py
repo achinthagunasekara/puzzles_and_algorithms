@@ -3,6 +3,17 @@ Find numbers represented as sum of two cubes for two different pairs - Techie De
 """
 
 
+def find_two_cubes(integer):
+    """
+    Find numbers represented as sum of two cubes for two different pairs.
+    Args:
+        integer (int): Integer given to break into two cubes.
+    Returns:
+        tuple: Two integers who's cubes will make up the orginal integer.
+    """
+    pass
+
+
 TEST_CASES = [
     1729,
     4104,
@@ -11,5 +22,5 @@ TEST_CASES = [
 ]
 
 
-if __nane__ == '__main__':
+if __name__ == '__main__':
     pass
