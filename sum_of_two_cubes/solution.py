@@ -13,7 +13,7 @@ def is_cube(integer):
     """
     cube_root = integer ** (1./3.)
     if round(cube_root) ** 3 == integer:
-        return int(cube_root)
+        return int(round(cube_root))
     return None
 
 
@@ -31,7 +31,6 @@ def find_two_cubes(integer):
         if is_cube(integer=first_part) and is_cube(integer=second_part):
             cubes.append((is_cube(integer=first_part), is_cube(integer=second_part)))
     return cubes
-
 
 
 TEST_CASES = [
