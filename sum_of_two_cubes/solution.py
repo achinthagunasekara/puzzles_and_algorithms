@@ -37,7 +37,7 @@ def find_two_cubes(integer):
 TEST_CASES = [
     1729,
     4104,
-    #13832,
+    13832,
     #20683
 ]
 
