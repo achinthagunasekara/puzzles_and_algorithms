@@ -25,8 +25,13 @@ def find_two_cubes(integer):
     Returns:
         tuple: Two integers who's cubes will make up the orginal integer.
     """
+    cubes = []
     for first_part in range(integer):
-        print first_part
+        second_part = integer - first_part
+        if is_cube(integer=first_part) and is_cube(integer=second_part):
+            cubes.append((first_part, second_part))
+    return cubes
+
 
 
 TEST_CASES = [
