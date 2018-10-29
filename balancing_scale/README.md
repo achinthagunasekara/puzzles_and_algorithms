@@ -1,6 +1,6 @@
 # Balancing Scale
 
-Have the function scale_balancing(int_arr) read strArr which will contain two elements, the first being the two positive integer weights on a balance scale (left and right sides) and the second element being a list of available weights as positive integers.
+Have the function scale_balancing(int_arr) read int_arr which will contain two elements, the first being the two positive integer weights on a balance scale (left and right sides) and the second element being a list of available weights as positive integers.
 
 Your goal is to determine if you can balance the scale by using the least amount of weights from the list, but using at most only 2 weights.
 
