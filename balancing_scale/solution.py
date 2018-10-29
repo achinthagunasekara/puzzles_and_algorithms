@@ -11,7 +11,8 @@ def scale_balancing(int_list):
     Returns:
         list: List of weights that must be added to each side.
     """
-    pass
+    on_scale  = int_list[0]
+    weights = int_list[1]
 
 
 TEST_CASES = [
