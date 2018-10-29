@@ -11,7 +11,7 @@ def scale_balancing(int_list):
     Returns:
         list: List of weights that must be added to each side.
     """
-    on_scale  = int_list[0]
+    on_scale = int_list[0]
     weights = int_list[1]
 
     for out_index, out_each_weight in enumerate(weights):
