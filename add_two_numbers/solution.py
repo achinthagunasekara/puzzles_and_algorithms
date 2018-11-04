@@ -55,5 +55,3 @@ link_list = solution.addTwoNumbers(l1, l2)
 while link_list is not None:
     print link_list.val
     link_list = link_list.next
-
-
