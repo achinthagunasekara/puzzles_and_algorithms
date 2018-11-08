@@ -14,7 +14,6 @@ Note: The number would always be an even number.
 
 For every test case print two prime numbers space separated, such that the smaller number appears first. Answer for each test case must be in a new line.
 
-
 ## Constraints
 
 * 1 ≤ T ≤ 70
