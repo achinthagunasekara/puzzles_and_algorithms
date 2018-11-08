@@ -10,7 +10,6 @@ The first line contains T, the number of test cases. The following T lines consi
 
 Note: The number would always be an even number.
 
- 
 ## Output
 
 For every test case print two prime numbers space separated, such that the smaller number appears first. Answer for each test case must be in a new line.
