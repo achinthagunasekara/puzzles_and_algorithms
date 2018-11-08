@@ -21,7 +21,6 @@ For every test case print two prime numbers space separated, such that the small
 * 1 ≤ T ≤ 70
 * 1 ≤ N ≤ 10000
 
-
 ## Example
 
 ### Input
