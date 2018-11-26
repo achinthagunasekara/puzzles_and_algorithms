@@ -54,7 +54,13 @@ a
  VvV
 ```
 
+### Input
+
+```
 SPACE
+```
+
+### Output
 
 ```
   |
