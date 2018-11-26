@@ -14,16 +14,14 @@ def draw(word):
     Returns:
         None
     """
+    word = list(word)
     print('  |')
     print(' /_\\')
-    print(' |I|')
-    print(' |N|')
-    print(' |D|')
-    print(' |I|')
-    print(' |A|')
+    for each_letter in word:
+        print(' |{0}|'.format(each_letter))
     print(' |_|')
     print('/___\\')
-    print(' VvV')
+    print(' VvV\n\n')
 
 
 INPUTS = [
