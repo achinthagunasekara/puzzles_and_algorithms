@@ -1,3 +1,5 @@
+### Draw a Rocket
+
 This isn't rocket science. LoL
 
 Write a program or function that takes in a single-line string. You can assume it only contains printable ASCII. Print or return a string of an ASCII art rocket such as
