@@ -23,21 +23,24 @@ with the input string written from top to bottom on the fuselage. In this case t
 
 [empty string]
 
+```
   |
  /_\
  |_|
 /___\
  VvV
+```
+
 
 a
-
+```
   |
  /_\
  |a|
  |_|
 /___\
  VvV
-
+```
 
 SPACE
 
