@@ -21,7 +21,13 @@ with the input string written from top to bottom on the fuselage. In this case t
 
 ## Examples
 
+### Input
+
+```
 [empty string]
+```
+
+### Output
 
 ```
   |
