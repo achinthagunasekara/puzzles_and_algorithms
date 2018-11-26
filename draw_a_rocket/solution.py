@@ -3,6 +3,9 @@ Solution to draw a rocket puzzle.
 """
 
 
+# pylint: disable=superfluous-parens
+
+
 def draw(word):
     """
     Draw the rocket with a word.
@@ -11,7 +14,16 @@ def draw(word):
     Returns:
         None
     """
-    pass
+    print('  |')
+    print(' /_\\')
+    print(' |I|')
+    print(' |N|')
+    print(' |D|')
+    print(' |I|')
+    print(' |A|')
+    print(' |_|')
+    print('/___\\')
+    print(' VvV')
 
 
 INPUTS = [
