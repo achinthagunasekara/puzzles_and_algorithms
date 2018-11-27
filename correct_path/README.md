@@ -8,12 +8,18 @@ For example: if str is "r?d?drdd" then your program should output the final corr
 
 ## Example
 
-Sample Test Cases
+```
 Input:"???rrurdr?"
+```
 
+```
 Output:"dddrrurdrd"
+```
 
-
+```
 Input:"drdr??rrddd?"
+```
 
+```
 Output:"drdruurrdddd"
+```
