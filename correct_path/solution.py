@@ -3,6 +3,9 @@ Solution to the correct path puzzle.
 """
 
 
+from copy import copy
+
+
 def get_grid():
     """
     Return the grid.
@@ -11,7 +14,9 @@ def get_grid():
         list: Grid structure.
     """
     row = ['0' for x_axis in range(0, 5)]  # pylint: disable=unused-variable
-    grid = [row for y_axis in range(0, 5)]  # pylint: disable=unused-variable
+    grid = [copy(row) for y_axis in range(0, 5)]  # pylint: disable=unused-variable
+    grid[0][0] = 'X'
+    grid[4][4] = 'X'
     return grid
 
 
