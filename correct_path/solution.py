@@ -11,7 +11,7 @@ def get_correct_path(path):
     Rerutns:
         str: Complete path
     """
-    pass
+    return path
 
 
 INPUTS = [
