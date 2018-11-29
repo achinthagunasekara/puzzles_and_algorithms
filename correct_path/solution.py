@@ -11,10 +11,8 @@ def get_correct_path(path):
     Rerutns:
         str: Complete path
     """
-    grid = []
-    for y_axis in range(0, 5):
-        for x_axis in range(0, 5):
-            grid[y_axis][x_axis] = 0
+    row = [0 for x_axis in range(0, 5)]  # pylint: disable=unused-variable
+    grid = [row for y_axis in range(0, 5)]  # pylint: disable=unused-variable
     print grid
     return path
 
