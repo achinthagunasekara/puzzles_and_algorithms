@@ -3,6 +3,30 @@ Solution to the correct path puzzle.
 """
 
 
+def get_grid():
+    """
+    Return the grid.
+    Args:
+    Returns:
+        list: Grid structure.
+    """
+    row = ['0' for x_axis in range(0, 5)]  # pylint: disable=unused-variable
+    grid = [row for y_axis in range(0, 5)]  # pylint: disable=unused-variable
+    return grid
+
+
+def print_grid(grid):
+    """
+    Print the grid on screen.
+    Args:
+        grid (list): Grid structure.
+    Returns:
+        None
+    """
+    for row in grid:
+        print(' '.join(row))  # pylint: disable=superfluous-parens
+
+
 def get_correct_path(path):
     """
     Returns the correct path for a given string.
@@ -11,9 +35,8 @@ def get_correct_path(path):
     Rerutns:
         str: Complete path
     """
-    row = [0 for x_axis in range(0, 5)]  # pylint: disable=unused-variable
-    grid = [row for y_axis in range(0, 5)]  # pylint: disable=unused-variable
-    print grid
+    grid = get_grid()
+    print_grid(grid=grid)
     return path
 
 
