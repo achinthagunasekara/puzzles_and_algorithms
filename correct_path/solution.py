@@ -53,4 +53,4 @@ INPUTS = [
 
 if __name__ == '__main__':
     for each in INPUTS:
-        print("{0} ==> {1}".format(each, get_correct_path(path=each)))  # pylint: disable=superfluous-parens
+        print("{0} ==> {1}\n".format(each, get_correct_path(path=each)))  # pylint: disable=superfluous-parens
