@@ -40,8 +40,14 @@ def get_correct_path(path):
     Rerutns:
         str: Complete path
     """
+    start = (0, 1)
+    end = (4, 4)
     grid = get_grid()
     print_grid(grid=grid)
+    path = list(path)
+    for each_step in path:
+        pass
+        
     return path
 
 
