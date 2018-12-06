@@ -13,7 +13,7 @@ def get_grid():
     Returns:
         list: Grid structure.
     """
-    row = ['0' for x_axis in range(0, 5)]  # pylint: disable=unused-variable
+    row = ['O' for x_axis in range(0, 5)]  # pylint: disable=unused-variable
     grid = [copy(row) for y_axis in range(0, 5)]  # pylint: disable=unused-variable
     grid[0][0] = 'X'
     grid[4][4] = 'X'
