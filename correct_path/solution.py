@@ -43,15 +43,28 @@ def get_correct_path(path):
     start = (0, 1)
     end = (4, 4)
     coordinates = []
+    coordinates.append(start)
+    last_step = start
 
     grid = get_grid()
     print_grid(grid=grid)
 
     path = list(path)
     for each_step in path:
-        if each_step != '?':
-            if not coordinates:
-                pass
+        if coordinates[-1] != '?':
+            last_step = coordinates[-1]
+        if each_step == 'u':
+            next_step = (last_step[0] - 1, last_step[1])
+        elif each_step == 'r':
+            next_step = (last_step[0], last_step[1] + 1)
+        elif each_step == 'd':
+            next_step = (last_step[0] + 1, last_step[1])
+        elif each_step == 'l':
+            next_step = (last_step[0], last_step[1] - 1)
+        else:
+            next_step = '?'
+        coordinates.append(next_step)
+    print coordinates
     return path
 
 
