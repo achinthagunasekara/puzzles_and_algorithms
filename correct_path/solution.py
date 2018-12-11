@@ -32,6 +32,59 @@ def print_grid(grid):
         print(' '.join(row))  # pylint: disable=superfluous-parens
 
 
+def shift_up(coordinates):
+    """
+    Shift up the given coordinates.
+    Args:
+        coordinates (list): List of coordinates.
+    Returns:
+        list: List of shifted coordinates.
+    """
+    for index, each_coordinate in enumerate(coordinates):
+        if each_coordinate != '?':
+            coordinates[index] = (each_coordinate[0] - 1, each_coordinate[1])
+
+
+def shift_right(coordinates):
+    """
+    Shift right the given coordinates.
+    Args:
+        coordinates (list): List of coordinates.
+    Returns:
+        list: List of shifted coordinates.
+    """
+    for index, each_coordinate in enumerate(coordinates):
+        if each_coordinate != '?':
+            coordinates[index] = (each_coordinate[0], each_coordinate[1] + 1)
+
+
+def shift_down(coordinates):
+    """
+    Shift down the given coordinates.
+    Args:
+        coordinates (list): List of coordinates.
+    Returns:
+        list: List of shifted coordinates.
+    """
+    for index, each_coordinate in enumerate(coordinates):
+        if each_coordinate != '?':
+            coordinates[index] = (each_coordinate[0] + 1, each_coordinate[1])
+    print coordinates
+
+
+def shift_left(coordinates):
+    """
+    Shift left the given coordinates.
+    Args:
+        coordinates (list): List of coordinates.
+    Returns:
+        list: List of shifted coordinates.
+    """
+    for index, each_coordinate in enumerate(coordinates):
+        if each_coordinate != '?':
+            coordinates[index] = (each_coordinate[0], each_coordinate[1] - 1)
+
+
 def get_correct_path(path):
     """
     Returns the correct path for a given string.
@@ -54,13 +107,29 @@ def get_correct_path(path):
         if coordinates[-1] != '?':
             last_step = coordinates[-1]
         if each_step == 'u':
-            next_step = (last_step[0] - 1, last_step[1])
+            if last_step[0] - 1 < 0:
+                shift_down(coordinates)
+                next_step = last_step
+            else:
+                next_step = (last_step[0] - 1, last_step[1])
         elif each_step == 'r':
-            next_step = (last_step[0], last_step[1] + 1)
+            if last_step[1] + 1 > len(grid[0]) - 1:
+                shift_left(coordinates)
+                next_step = last_step
+            else:
+                next_step = (last_step[0], last_step[1] + 1)
         elif each_step == 'd':
-            next_step = (last_step[0] + 1, last_step[1])
+            if last_step[0] + 1 > len(grid) - 1:
+                shift_up(coordinates)
+                next_step = last_step
+            else:
+                next_step = (last_step[0] + 1, last_step[1])
         elif each_step == 'l':
-            next_step = (last_step[0], last_step[1] - 1)
+            if last_step[1] - 1 < 0:
+                shift_right(coordinates)
+                next_step = last_step
+            else:
+                next_step = (last_step[0], last_step[1] - 1)
         else:
             next_step = '?'
         coordinates.append(next_step)
