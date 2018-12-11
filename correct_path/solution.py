@@ -69,7 +69,6 @@ def shift_down(coordinates):
     for index, each_coordinate in enumerate(coordinates):
         if each_coordinate != '?':
             coordinates[index] = (each_coordinate[0] + 1, each_coordinate[1])
-    print coordinates
 
 
 def shift_left(coordinates):
