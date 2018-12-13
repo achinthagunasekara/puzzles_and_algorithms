@@ -92,14 +92,14 @@ def get_correct_path(path):
     Rerutns:
         str: Complete path
     """
+    grid = get_grid()
+    print_grid(grid=grid)
+
     start = (0, 1)
-    end = (4, 4)
+    end = (len(grid) - 1, len(grid) - 1)
     coordinates = []
     coordinates.append(start)
     last_step = start
-
-    grid = get_grid()
-    print_grid(grid=grid)
 
     path = list(path)
     for each_step in path:
