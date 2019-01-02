@@ -1,11 +1,21 @@
+#include<stdio.h>
 // Remove comments from main.c file
+// main.c contents:
+// main.c contents:
+// main.c contents:
 // main.c contents:
 int main()
 {
-   // printf() displays the string inside quotation
-   printf("Hello, World!");
-   printf("foo"); /* More comments
-And more comments
-*/ return 0;
-/* this is a test comment */
+   // displays the string inside quotation
+   printf("Hello, World!"); // hi
+   printf("Foo"); /* hi */
+   printf("Bar"); /* adfasdfasdfasdf */
+   printf("Baz");
+   /*
+    * More comments
+    * And more comments
+    * foo
+    * bar
+    * baz
+   */ return 0;
 }
