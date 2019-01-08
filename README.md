@@ -2,9 +2,3 @@
 
 Some puzzles and algorithms found on the internet and my working solutions.
 
-
-
-
-
-
-
