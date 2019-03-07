@@ -6,7 +6,7 @@ Solution - Perform division of two numbers without using division operator (/).
 from __future__ import print_function
 
 
-def devide_one(first, second):
+def devide(first, second):
     """
     Devide 2 numbers without using (/) operator.
     Args:
@@ -39,6 +39,7 @@ TESTS = [
     (20, 5),
     (60, -15),
     (100, 1000),
+    (2, 0),
     (2, -3),
     (25, 4),
 ]
@@ -46,4 +47,7 @@ TESTS = [
 
 if __name__ == '__main__':
     for test in TESTS:
-        devide_one(first=test[0], second=test[1])
+        try:
+            devide(first=test[0], second=test[1])
+        except ZeroDivisionError as zex:
+            print(zex.message)
