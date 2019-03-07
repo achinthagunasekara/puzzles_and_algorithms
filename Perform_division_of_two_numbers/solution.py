@@ -2,6 +2,10 @@
 Solution - Perform division of two numbers without using division operator (/).
 """
 
+
+from __future__ import print_function
+
+
 def devide_one(first, second):
     """
     Devide 2 numbers without using (/) operator.
@@ -19,5 +23,26 @@ def devide_one(first, second):
     second = abs(second)
     quotient = 0
 
+    while first >= second:
+        first = first - second
+        quotient += 1
+
+    if not sign:
+        quotient = -quotient
+
+    print("Answer is {0} and {1}/{2}".format(quotient, first, second))
+
+
+TESTS = [
+    (1, 2),
+    (20, 5),
+    (60, -15),
+    (100, 1000),
+    (2, -3),
+    (25, 4),
+]
+
+
 if __name__ == '__main__':
-    pass
+    for test in TESTS:
+        devide_one(first=test[0], second=test[1])
