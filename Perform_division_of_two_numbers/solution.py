@@ -29,6 +29,7 @@ def devide_one(first, second):
 
     if not sign:
         quotient = -quotient
+        first = -first
 
     print("Answer is {0} and {1}/{2}".format(quotient, first, second))
 
