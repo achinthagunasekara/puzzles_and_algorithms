@@ -31,7 +31,8 @@ def calculate(user_input):
     user_input_list = [int(x) for x in user_input.split(':')]
     hour_deg = convert_hand_to_deg(position=user_input_list[0], hour_hand=True)
     minute_deg = convert_hand_to_deg(position=user_input_list[1])
-    deg = 360 - abs(hour_deg - minute_deg)
+    diff = abs(hour_deg - minute_deg)
+    deg = diff if (360 - diff) > diff else (360 - diff)
     symbol = u'\xb0'.encode('utf8')
     print("{0}{1}".format(deg, symbol))
 
