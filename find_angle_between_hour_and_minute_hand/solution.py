@@ -42,18 +42,21 @@ def run():
     Get user input, process and return output.
     """
     print('Welcome. Please enter time in hh:mm format or exit to end the program')
-    while True:
-        user_input = raw_input("Please enter the time: ")
+    try:
+        while True:
+            user_input = raw_input("Please enter the time: ")
 
-        if user_input.lower() == 'exit':
-            break
+            if user_input.lower() == 'exit':
+                break
 
-        pattern = re.compile("^[1]*[1-9]:[0-5][0-9]$")
-        if not pattern.match(user_input):
-            print("Invalid input. Please try again")
-            continue
+            pattern = re.compile("^[1]*[0-9]:[0-5][0-9]$")
+            if not pattern.match(user_input):
+                print("Invalid input. Please try again")
+                continue
 
-        calculate(user_input=user_input)
+            calculate(user_input=user_input)
+    except KeyboardInterrupt:
+        print('\nThanks for using this program. Good bye!')
 
 
 if __name__ == '__main__':
