@@ -7,6 +7,18 @@ Solution to Find Angle Between Hour and Minute Hand Puzzle.
 from __future__ import print_function
 import re
 
+def convert_hour_hand(position):
+    """
+    Convert hour hand position to deg.
+    Args:
+        position (int): Position of the hour hand.
+    Returns:
+        int: Deg of the hour hand.
+    """
+    each_hour = 360/12
+    deg = each_hour * position
+    print(deg)
+
 
 def calculate(user_input):
     """
@@ -16,8 +28,8 @@ def calculate(user_input):
     Returns:
         int: Angle between hour and minute hand.
     """
-    user_input_list = user_input.split(':')
-    print(user_input_list)
+    user_input_list = [int(x) for x in user_input.split(':')]
+    convert_hour_hand(position=user_input_list[0])
 
 
 def run():
@@ -36,7 +48,7 @@ def run():
             print("Invalid input. Please try again")
             continue
 
-        calculate(user_input)
+        calculate(user_input=user_input)
 
 
 if __name__ == '__main__':
