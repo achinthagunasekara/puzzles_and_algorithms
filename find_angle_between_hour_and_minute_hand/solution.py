@@ -49,7 +49,7 @@ def run():
             if user_input.lower() == 'exit':
                 break
 
-            pattern = re.compile("^[1]*[0-9]:[0-5][0-9]$")
+            pattern = re.compile("^(1[0-2]|0?[1-9]):[0-5][0-9]$")
             if not pattern.match(user_input):
                 print("Invalid input. Please try again")
                 continue
