@@ -9,5 +9,14 @@ def get_input():
         str: User input string.
     """
 
+def change_letters(string):
+    """
+    Change letters in the given string.
+    Args:
+        string (str): Input string.
+    Returns:
+        str: Changed string.
+    """
+
 if __name__ == '__main__':
     pass
