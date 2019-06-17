@@ -2,12 +2,17 @@
 Solution to letter change puzzle.
 """
 
+from __future__ import print_function
+
 def get_input():
     """
     Get input from the user.
     Returns.
         str: User input string.
     """
+    while True:
+        user_input = raw_input("Please enter a sentence: ")
+        yield user_input
 
 def change_letters(string):
     """
@@ -19,4 +24,5 @@ def change_letters(string):
     """
 
 if __name__ == '__main__':
-    pass
+    for sentence in get_input():
+        print(sentence)
