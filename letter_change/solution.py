@@ -16,15 +16,15 @@ def get_input():
             return
         yield user_input
 
-def change_letters(string):
+def change_letters(sentence):
     """
     Change letters in the given string.
     Args:
-        string (str): Input string.
+        sentence (str): Input string.
     Returns:
         str: Changed string.
     """
 
 if __name__ == '__main__':
-    for sentence in get_input():
-        print(sentence)
+    for each_input in get_input():
+        print(change_letters(sentence=each_input))
