@@ -13,7 +13,7 @@ def get_input():
         str: User input string.
     """
     while True:
-        user_input = raw_input("Please enter a sentence: ")
+        user_input = raw_input('Please enter a sentence: ')
         if user_input.lower() == 'end':
             return
         yield user_input
