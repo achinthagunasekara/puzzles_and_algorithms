@@ -28,5 +28,11 @@ def change_letters(sentence):
     """
 
 if __name__ == '__main__':
-    for each_input in get_input():
-        print(change_letters(sentence=each_input))
+    try:
+        for each_input in get_input():
+            print("'{0}' can be encoded to '{1}'".format(
+                each_input, change_letters(sentence=each_input)
+            ))
+    except KeyboardInterrupt:
+        pass
+    print('Thank you for using letter change script!')
