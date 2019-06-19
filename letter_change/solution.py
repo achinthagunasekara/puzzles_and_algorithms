@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Solution to letter change puzzle.
 """
