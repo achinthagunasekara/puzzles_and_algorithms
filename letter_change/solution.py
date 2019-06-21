@@ -6,6 +6,10 @@ Solution to letter change puzzle.
 
 from __future__ import print_function
 
+
+VOWELS = ['a', 'e', 'i', 'o', 'u']
+
+
 def get_input():
     """
     Get input from the user.
