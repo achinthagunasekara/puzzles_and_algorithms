@@ -26,6 +26,7 @@ def change_letters(sentence):
     Returns:
         str: Changed string.
     """
+    return sentence
 
 if __name__ == '__main__':
     try:
