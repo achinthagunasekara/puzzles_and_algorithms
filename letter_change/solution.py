@@ -5,10 +5,11 @@ Solution to letter change puzzle.
 """
 
 from __future__ import print_function
+import string
 
 
 VOWELS = ['a', 'e', 'i', 'o', 'u']
-
+LETTERS = string.ascii_lowercase[:26]
 
 def get_input():
     """
