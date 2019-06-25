@@ -31,6 +31,11 @@ def change_letters(sentence):
     Returns:
         str: Changed string.
     """
+    changed = []
+    for letter in sentence:
+        upper = letter.isupper()
+        current_letter_index = LETTERS.index(letter)
+
     return sentence
 
 if __name__ == '__main__':
