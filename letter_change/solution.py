@@ -34,9 +34,19 @@ def change_letters(sentence):
     changed = []
     for letter in sentence:
         upper = letter.isupper()
-        current_letter_index = LETTERS.index(letter)
+        try:
+            current_letter_index = LETTERS.index(letter.lower())
+            changed_letter_index = current_letter_index + 1
+            changed_letter = LETTERS[changed_letter_index]
+        except IndexError: # letter must be z
+            changed_letter = LETTERS[0]
+        except ValueError: # letter must not be in [a-z]
+            changed_letter = letter
 
-    return sentence
+        changed_letter = changed_letter.upper() if upper else changed_letter
+        changed.append(changed_letter)
+    return ''.join(changed)
+
 
 if __name__ == '__main__':
     try:
