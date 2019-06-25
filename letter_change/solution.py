@@ -43,8 +43,11 @@ def change_letters(sentence):
         except ValueError: # letter must not be in [a-z]
             changed_letter = letter
 
-        changed_letter = changed_letter.upper() if upper else changed_letter
+        if upper or changed_letter in VOWELS:
+            changed_letter = changed_letter.upper()
+
         changed.append(changed_letter)
+
     return ''.join(changed)
 
 
