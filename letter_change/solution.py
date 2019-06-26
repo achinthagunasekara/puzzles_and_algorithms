@@ -40,7 +40,7 @@ def change_letters(sentence):
             changed_letter = LETTERS[changed_letter_index]
         except IndexError: # letter must be z
             changed_letter = LETTERS[0]
-        except ValueError: # letter must not be in [a-z]
+        except ValueError: # letter must not match [a-z]
             changed_letter = letter
 
         if upper or changed_letter in VOWELS:
