@@ -1,3 +1,4 @@
+#!/usr/bin/python
 """
 Solution to time delta puzzle.
 """
