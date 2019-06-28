@@ -2,6 +2,9 @@
 Solution to time delta puzzle.
 """
 
+from __future__ import print_function
+
+
 def get_test_cases():
     """
     Get input from the user.
@@ -23,6 +26,7 @@ def run():
     Run function for the puzzle.
     """
     test_cases = get_test_cases()
+    print(test_cases)
 
 
 if __name__ == '__main__':
