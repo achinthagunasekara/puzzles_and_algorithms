@@ -1,19 +1,22 @@
-#!/usr/bin/python
+#!/usr/local/bin/python3
 """
 Solution to time delta puzzle.
 """
 
 from __future__ import print_function
+from datetime import datetime
 
-def validate_date_time_input(datetime):
+
+def validate_date_time_input(input_str):
     """
     validate input datetime from the user.
     Args:
-        datetime (str): input string from the user.
+        (input_str) (str): input string from the user.
     Returns:
         datetime: datetime object.
     """
-    pass
+    datetime_object = datetime.strptime(input_str, '%a %d %b %Y %H:%M:%S %z')
+    return datetime_object
 
 
 
@@ -24,12 +27,12 @@ def get_test_cases():
         str: User input string.
     """
     test_cases = []
-    number_of_test_cases = input('Please enter number of test cases: ')
+    number_of_test_cases = int(input('Please enter number of test cases: '))
     count = 0
     while number_of_test_cases > count:
         count += 1
-        test_case = raw_input("Please enter the test case {0}: ".format(count))
-        test_cases.append(test_case)
+        test_case = input("Please enter the test case {0}: ".format(count))
+        test_cases.append(validate_date_time_input(input_str=test_case))
     return test_cases
 
 
