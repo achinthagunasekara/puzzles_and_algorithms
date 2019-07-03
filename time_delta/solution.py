@@ -30,12 +30,22 @@ def get_test_cases():
         str: User input string.
     """
     test_cases = []
-    number_of_test_cases = int(input('Please enter number of test cases: '))
+
+    try:
+        number_of_test_cases = int(input('Please enter number of test cases: '))
+    except ValueError:
+        print('Please enter a vaild number for number of test cases')
+        return None
+
     count = 0
     while number_of_test_cases > count:
-        count += 1
         test_case = input("Please enter the test case {0}: ".format(count))
-        test_cases.append(validate_date_time_input(input_str=test_case))
+        test_case = validate_date_time_input(input_str=test_case)
+        if not test_case:
+            print('Looks like your input is invalid. Please try again')
+        else:
+            test_cases.append(test_case)
+            count += 1
     return test_cases
 
 
