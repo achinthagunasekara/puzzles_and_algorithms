@@ -21,7 +21,7 @@ def get_datetime_input():
         datetime_object = datetime.strptime(datetime_str, '%a %d %b %Y %H:%M:%S %z')
     except ValueError as val_err:
         print("Input error - {0}".format(val_err))
-        get_datetime_input()
+        datetime_object = get_datetime_input()
     return datetime_object
 
 
