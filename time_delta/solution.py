@@ -15,9 +15,12 @@ def validate_date_time_input(input_str):
     Returns:
         datetime: datetime object.
     """
-    datetime_object = datetime.strptime(input_str, '%a %d %b %Y %H:%M:%S %z')
+    datetime_object = None
+    try:
+        datetime_object = datetime.strptime(input_str, '%a %d %b %Y %H:%M:%S %z')
+    except ValueError as val_err:
+        print("Input error - {0}".format(val_err))
     return datetime_object
-
 
 
 def get_test_cases():
