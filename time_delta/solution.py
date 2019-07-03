@@ -53,8 +53,11 @@ def run():
     """
     Run function for the puzzle.
     """
-    test_cases = get_test_cases()
-    print(test_cases)
+    try:
+        test_cases = get_test_cases()
+        print(test_cases)
+    except KeyboardInterrupt:
+        print('Thank you for using this program. Good bye!')
 
 
 if __name__ == '__main__':
