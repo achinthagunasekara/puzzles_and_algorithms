@@ -5,6 +5,17 @@ Solution to time delta puzzle.
 
 from __future__ import print_function
 
+def validate_date_time_input(datetime):
+    """
+    validate input datetime from the user.
+    Args:
+        datetime (str): input string from the user.
+    Returns:
+        datetime: datetime object.
+    """
+    pass
+
+
 
 def get_test_cases():
     """
