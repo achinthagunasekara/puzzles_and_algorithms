@@ -37,8 +37,9 @@ def get_test_cases():
         print('Please enter a vaild number for number of test cases')
         return None
 
+    inputs_needed = number_of_test_cases * 2
     count = 1
-    while number_of_test_cases >= count:
+    while inputs_needed >= count:
         test_case = input("Please enter the test case {0}: ".format(count))
         test_case = validate_date_time_input(input_str=test_case)
         if not test_case:
