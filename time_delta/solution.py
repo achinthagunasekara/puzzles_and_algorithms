@@ -50,6 +50,15 @@ def get_test_cases():
     return test_cases
 
 
+def process(test_cases):
+    """
+    Processes collected test cases.
+    Args:
+        test_cases (list): List of test cases
+    """
+    pass
+
+
 def run():
     """
     Run function for the puzzle.
