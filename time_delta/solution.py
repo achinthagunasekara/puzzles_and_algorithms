@@ -56,7 +56,8 @@ def process(test_cases):
         test_cases (list): List of test cases
     """
     for test_case in test_cases:
-        print(test_case)
+        delta = test_case[0] - test_case[1]
+        print(delta.days * 86400 + delta.seconds)
 
 
 def run():
