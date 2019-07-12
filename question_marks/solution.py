@@ -28,15 +28,32 @@ def check_questions_marks(string):
     Returns:
         bool: True if string matches above condition, False otherwise.
     """
-    pass
+    num_of_question_marks = 0
+    index_checking_from = None
+    for index, char in enumerate(string):
+        if char.isdigit():
+            index_checking_from = index
+
+            if num_of_question_marks == 3:
+                return True
+
+            num_of_question_marks = 0
+
+        if index_checking_from is not None and char == "?":
+            num_of_question_marks += 1
+    return False
 
 
 def run():
     """
     Run the puzzle.
     """
-    for user_input in get_input():
-        print(check_questions_marks(string=user_input))
+    try:
+        for user_input in get_input():
+            print(check_questions_marks(string=user_input))
+    except KeyboardInterrupt:
+        pass
+    print('Thank you for using. Good bye!')
 
 
 if __name__ == '__main__':
