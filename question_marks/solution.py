@@ -18,5 +18,13 @@ def get_input():
             return
         yield user_input
 
+
+def run():
+    """
+    Run the puzzle.
+    """
+    user_input = get_input()
+
+
 if __name__ == '__main__':
-    pass
+    run()
