@@ -35,8 +35,8 @@ def run():
     """
     Run the puzzle.
     """
-    user_input = get_input()
-    print(check_questions_marks(string=user_input))
+    for user_input in get_input():
+        print(check_questions_marks(string=user_input))
 
 
 if __name__ == '__main__':
