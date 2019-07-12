@@ -19,11 +19,24 @@ def get_input():
         yield user_input
 
 
+def check_questions_marks(string):
+    """
+    Check if there is are 3 question marks between two numbers
+    that adds up to 10.
+    Args:
+        string (str): Input string to check.
+    Returns:
+        bool: True if string matches above condition, False otherwise.
+    """
+    pass
+
+
 def run():
     """
     Run the puzzle.
     """
     user_input = get_input()
+    print(check_questions_marks(string=user_input))
 
 
 if __name__ == '__main__':
