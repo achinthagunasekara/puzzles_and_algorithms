@@ -23,14 +23,19 @@ On the second line, output the number of occurrences for each distinct word acco
 
 ## Example
 
+### Sample Input
+
 ```
 4
 bcdef
 abcdefg
 bcde
 bcdef
-Sample Output
+```
 
+### Sample Output
+
+```
 3
 2 1 1
 ```
