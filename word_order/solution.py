@@ -4,6 +4,8 @@
 Solution to word order puzzle.
 """
 
+import collections
+
 
 def check_input(user_input):
     """
@@ -48,8 +50,16 @@ def process_input(words):
     Args:
         words (list): List of words from then user.
     """
+    word_info = collections.OrderedDict()
     for word in words:
-        print(word)
+        try:
+            word_info[word] += 1
+        except KeyError:
+            word_info[word] = 1
+
+    print("Total unique words are {0}".format(len(word_info)))
+    for word, count in word_info.items():
+        print("{0} => {1}".format(word, count))
 
 
 def run():
