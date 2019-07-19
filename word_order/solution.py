@@ -42,6 +42,14 @@ def get_user_input():
     return words
 
 
+def process_input(words):
+    """
+    Get the user input words and count
+    Args:
+        words (list): List of words from then user.
+    """
+
+
 def run():
     """
     Run the puzzle.
@@ -51,6 +59,7 @@ def run():
             words = get_user_input()
             if not words:
                 pass
+            process_input(words=words)
     except KeyboardInterrupt:
         print('Thank you for using this. Bye!')
 
