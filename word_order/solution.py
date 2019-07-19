@@ -7,6 +7,8 @@ Solution to word order puzzle.
 def get_user_input():
     """
     Get input from the user.
+    Returns:
+        list: List of strings.
     """
     words = []
     num_words = input("Enter the number of words you want to input: ")
@@ -22,6 +24,15 @@ def get_user_input():
     return words
 
 
+def run():
+    """
+    Run the puzzle.
+    """
+    while True:
+        words = get_user_input()
+        if not words:
+            pass
+
 
 if __name__ == '__main__':
-    get_user_input()
+    run()
