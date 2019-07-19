@@ -24,7 +24,9 @@ def get_user_input():
         list: List of strings.
     """
     words = []
-    num_words = input("Enter the number of words you want to input: ")
+    num_words = check_input(
+        user_input=input("Enter the number of words you want to input: ")
+    )
     try:
         num_words = int(num_words)
     except ValueError:
@@ -32,8 +34,11 @@ def get_user_input():
         return None
 
     for iteration in range(num_words):
-        words.append(input("Please enter the word {0}: ".format(iteration + 1)))
-
+        words.append(
+            check_input(
+                user_input=input("Please enter the word {0}: ".format(iteration + 1))
+            )
+        )
     return words
 
 
@@ -51,4 +56,6 @@ def run():
 
 
 if __name__ == '__main__':
+    print('==== Welcome to word order puzzle solution ====')
+    print('==== Enter `end` to end the program anytime ===')
     run()
