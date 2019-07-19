@@ -28,10 +28,13 @@ def run():
     """
     Run the puzzle.
     """
-    while True:
-        words = get_user_input()
-        if not words:
-            pass
+    try:
+        while True:
+            words = get_user_input()
+            if not words:
+                pass
+    except KeyboardInterrupt:
+        print('Thank you for using this. Bye!')
 
 
 if __name__ == '__main__':
