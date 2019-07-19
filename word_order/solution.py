@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 """
 Solution to word order puzzle.
 """
