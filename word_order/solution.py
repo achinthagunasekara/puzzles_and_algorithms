@@ -4,6 +4,19 @@
 Solution to word order puzzle.
 """
 
+
+def check_input(user_input):
+    """
+    Check input for the word end.
+    If end present raise a KeyboardInterrupt and kill the program.
+    Args:
+        user_input (str): Input from the user.
+    """
+    if user_input.lower() == 'end':
+        raise KeyboardInterrupt()
+    return user_input
+
+
 def get_user_input():
     """
     Get input from the user.
