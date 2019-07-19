@@ -48,6 +48,8 @@ def process_input(words):
     Args:
         words (list): List of words from then user.
     """
+    for word in words:
+        print(word)
 
 
 def run():
