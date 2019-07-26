@@ -13,5 +13,12 @@ def get_user_input():
     return words.split(',')
 
 
-if __name__ == '__main__':
+def run():
+    """
+    Run the puzzle.
+    """
     pass
+
+
+if __name__ == '__main__':
+    run()
