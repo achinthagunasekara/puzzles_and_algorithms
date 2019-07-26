@@ -10,7 +10,7 @@ def get_user_input():
     Get input from the user.
     """
     words = input('Please enter a comma seperated list of words: ')
-    return words.split(',')
+    return words.replace(' ', '').split(',')
 
 
 def run():
