@@ -17,7 +17,8 @@ def run():
     """
     Run the puzzle.
     """
-    pass
+    words = get_user_input()
+    print(words)
 
 
 if __name__ == '__main__':
