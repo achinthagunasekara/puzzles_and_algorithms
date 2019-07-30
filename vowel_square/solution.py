@@ -17,7 +17,6 @@ def get_user_input():
     if not all(len(word) == the_len for word in words):
         print('All words must be of same length. Please try again')
         return get_user_input()
-
     return words
 
 
