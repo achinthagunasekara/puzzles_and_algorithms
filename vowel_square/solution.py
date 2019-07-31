@@ -20,12 +20,21 @@ def get_user_input():
     return words
 
 
+def vowel_square(words):
+    """
+    Do the thing.
+    Args:
+        words (list): List of strings entered by the user.
+    """
+    print(words)
+
+
 def run():
     """
     Run the puzzle.
     """
     words = get_user_input()
-    print(words)
+    vowel_square(words=words)
 
 
 if __name__ == '__main__':
