@@ -20,6 +20,16 @@ def get_user_input():
     return words
 
 
+def print_the_square(words):
+    """
+    Print the square.
+    Args:
+        words (list): List of words.
+    """
+    for word in words:
+        print(word)
+
+
 def vowel_square(words):
     """
     Do the thing.
@@ -34,6 +44,7 @@ def run():
     Run the puzzle.
     """
     words = get_user_input()
+    print_the_square(words=words)
     vowel_square(words=words)
 
 
