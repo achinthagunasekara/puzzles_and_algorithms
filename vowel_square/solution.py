@@ -36,7 +36,8 @@ def vowel_square(words):
     Args:
         words (list): List of strings entered by the user.
     """
-    print(words)
+    for row in words:
+        print(row)
 
 
 def run():
