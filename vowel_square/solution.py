@@ -36,9 +36,31 @@ def vowel_square(words):
     Args:
         words (list): List of strings entered by the user.
     """
+    pos = None
     for index_row, row in enumerate(words):
         for index_letter, letter in enumerate(row):
-            print(letter)
+            if not letter in VOWELS:
+                continue
+            try:
+                if not row[index_letter + 1] in VOWELS:
+                    continue
+            except IndexError:
+                continue
+
+            try:
+                if not words[index_row + 1][index_letter] in VOWELS:
+                    continue
+            except IndexError:
+                continue
+
+            try:
+                if not words[index_row + 1][index_letter + 1] in VOWELS:
+                    continue
+            except IndexError:
+                continue
+
+        pos = (index_row, index_letter)
+    return pos
 
 
 def run():
