@@ -36,8 +36,9 @@ def vowel_square(words):
     Args:
         words (list): List of strings entered by the user.
     """
-    for index_outer, row in enumerate(words):
-        print(row)
+    for index_row, row in enumerate(words):
+        for index_letter, letter in enumerate(row):
+            print(letter)
 
 
 def run():
