@@ -59,7 +59,7 @@ def vowel_square(words):
             except IndexError:
                 continue
 
-        pos = (index_row, index_letter)
+            pos = (index_row, index_letter)
     return pos
 
 
@@ -69,7 +69,11 @@ def run():
     """
     words = get_user_input()
     print_the_square(words=words)
-    vowel_square(words=words)
+    pos = vowel_square(words=words)
+    if pos:
+        print("Vowel square starts at {0}".format(pos))
+    else:
+        print('Vowel square not found')
 
 
 if __name__ == '__main__':
