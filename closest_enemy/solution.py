@@ -45,8 +45,23 @@ def build_metrix():
     return metrix
 
 
-if __name__ == '__main__':
+def print_metrix(metrix):
+    """
+    Print the metrix in a pretty format.
+    Args:
+        metrix (list): List of lists (metrix).
+    """
+
+def run():
+    """
+    Run the puzzle.
+    """
     try:
-        build_metrix()
+        metrix = build_metrix()
+        print_metrix(metrix=metrix)
     except ClosestEnemyException as ex:
         print("Something went wrong - {0}".format(ex))
+
+
+if __name__ == '__main__':
+    run()
