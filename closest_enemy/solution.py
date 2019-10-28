@@ -43,6 +43,7 @@ def build_metrix():
                     "Invalid input {0}. Must be one of 0, 1 or 2".format(item)
                 )
             # In the whole metrix, value 1 is allowed once only.
+            # If user enters more than 1 character, metrix is not valid.
             if item == "1":
                 if friendly_found:
                     raise ClosestEnemyException('You can only enter one friendly (value 1)')
