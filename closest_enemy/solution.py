@@ -62,6 +62,7 @@ def print_metrix(metrix):
     for row in metrix:
         print(' '.join(row))
 
+
 def run():
     """
     Run the puzzle.
