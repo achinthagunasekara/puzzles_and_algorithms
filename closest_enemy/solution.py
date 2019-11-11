@@ -78,11 +78,21 @@ def get_friendly_pos(metrix):
     return None
 
 
+def get_enemy_pos(metrix):
+    """
+    Get the ememy positions.
+    Args:
+        metrix (list): List of lists (metrix).
+    """
+
+
 def find_closest_enemy(metrix):
     """
     Find the closest enemy in a given metrix.
     Args:
         metrix (list): List of lists (metrix).
+    Returns:
+        tuple, int: Location of the enemy and and distance to it.
     """
     friendly_pos = get_friendly_pos(metrix=metrix)
     if not friendly_pos:
