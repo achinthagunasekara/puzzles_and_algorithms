@@ -68,7 +68,14 @@ def get_friendly_pos(metrix):
     Get the position of the friendly.
     Args:
         metrix (list): List of lists (metrix).
+    Returns:
+        tuple: Position of the friendly.
     """
+    for col_index, col in enumerate(metrix):
+        for row_index, row in enumerate(col):
+            if row == '1':
+                return (col_index, row_index)
+    return None
 
 
 def find_closest_enemy(metrix):
@@ -78,6 +85,7 @@ def find_closest_enemy(metrix):
         metrix (list): List of lists (metrix).
     """
     friendly_pos = get_friendly_pos(metrix=metrix)
+    print(friendly_pos)
 
 
 def run():
