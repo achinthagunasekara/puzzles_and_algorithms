@@ -87,7 +87,14 @@ def find_closest_enemy(metrix):
     friendly_pos = get_friendly_pos(metrix=metrix)
     if not friendly_pos:
         raise ClosestEnemyException('No friendly found in the metrix')
-    print(friendly_pos)
+    print("Friendly is located at {0}".format(friendly_pos))
+    for col_index, col in enumerate(metrix):
+        for row_index, row in enumerate(col):
+            if row == '2':
+                enemy_pos = (col_index, row_index)
+                print("Enemy found at {0}".format(enemy_pos))
+                dist = (friendly_pos[0] - enemy_pos[0]) + (friendly_pos[1] - enemy_pos[1])
+                print("Distance is {0}".format(dist))
 
 
 def run():
