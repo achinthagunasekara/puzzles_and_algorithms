@@ -109,18 +109,15 @@ def find_closest_enemy(metrix):
 
     closest_enemy = None
     closest_dist = None
-    for col_index, col in enumerate(metrix):
-        for row_index, row in enumerate(col):
-            if row == '2':
-                enemy_pos = (col_index, row_index)
-                dist = abs(friendly_pos[0] - enemy_pos[0]) + abs(friendly_pos[1] - enemy_pos[1])
-                print("Enemy found at {0} and {1} jumps away".format(enemy_pos, dist))
-                if not closest_enemy:
-                    closest_enemy = enemy_pos
-                    closest_dist = dist
-                if closest_dist > dist:
-                    closest_enemy = enemy_pos
-                    closest_dist = dist
+    for enemy_pos in get_enemies(metrix=metrix):
+        dist = abs(friendly_pos[0] - enemy_pos[0]) + abs(friendly_pos[1] - enemy_pos[1])
+        print("Enemy found at {0} and {1} jumps away".format(enemy_pos, dist))
+        if not closest_enemy:
+            closest_enemy = enemy_pos
+            closest_dist = dist
+        if closest_dist > dist:
+            closest_enemy = enemy_pos
+            closest_dist = dist
     return closest_enemy, closest_dist
 
 
