@@ -85,6 +85,8 @@ def find_closest_enemy(metrix):
         metrix (list): List of lists (metrix).
     """
     friendly_pos = get_friendly_pos(metrix=metrix)
+    if not friendly_pos:
+        raise ClosestEnemyException('No friendly found in the metrix')
     print(friendly_pos)
 
 
