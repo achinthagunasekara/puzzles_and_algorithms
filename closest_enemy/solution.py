@@ -93,7 +93,7 @@ def find_closest_enemy(metrix):
             if row == '2':
                 enemy_pos = (col_index, row_index)
                 print("Enemy found at {0}".format(enemy_pos))
-                dist = (friendly_pos[0] - enemy_pos[0]) + (friendly_pos[1] - enemy_pos[1])
+                dist = abs(friendly_pos[0] - enemy_pos[0]) + abs(friendly_pos[1] - enemy_pos[1])
                 print("Distance is {0}".format(dist))
 
 
