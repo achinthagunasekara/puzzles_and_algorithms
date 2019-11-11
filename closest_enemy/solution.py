@@ -63,6 +63,14 @@ def print_metrix(metrix):
         print(' '.join(row))
 
 
+def find_closest_enemy(metrix):
+    """
+    Find the closest enemy in a given metrix.
+    Args:
+        metrix (list): List of lists (metrix).
+    """
+
+
 def run():
     """
     Run the puzzle.
@@ -70,6 +78,7 @@ def run():
     try:
         metrix = build_metrix()
         print_metrix(metrix=metrix)
+        find_closest_enemy(metrix=metrix)
     except ClosestEnemyException as ex:
         print("Something went wrong - {0}".format(ex))
 
