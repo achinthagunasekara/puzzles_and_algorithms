@@ -78,44 +78,50 @@ def get_friendly_pos(metrix):
     return None
 
 
-def get_ememy_pos(metrix):
+def get_enemy_pos(metrix):
     """
-    Get the ememy positions.
+    Get the enemy positions.
     Args:
         metrix (list): List of lists (metrix).
     Returns:
-        list: List of tuples containing ememy positions.
+        list: List of tuples containing enemy positions.
     """
+    enemies = []
+    for col_index, col in enumerate(metrix):
+        for row_index, row in enumerate(col):
+            if row == '2':
+                enemies.append((col_index, row_index))
+    return enemies
 
 
-def find_closest_ememy(metrix):
+def find_closest_enemy(metrix):
     """
-    Find the closest ememy in a given metrix.
+    Find the closest enemy in a given metrix.
     Args:
         metrix (list): List of lists (metrix).
     Returns:
-        tuple, int: Location of the ememy and and distance to it.
+        tuple, int: Location of the enemy and and distance to it.
     """
     friendly_pos = get_friendly_pos(metrix=metrix)
     if not friendly_pos:
         raise ClosestEnemyException('No friendly found in the metrix')
     print("Friendly is located at {0}".format(friendly_pos))
 
-    closest_ememy = None
+    closest_enemy = None
     closest_dist = None
     for col_index, col in enumerate(metrix):
         for row_index, row in enumerate(col):
             if row == '2':
-                ememy_pos = (col_index, row_index)
-                dist = abs(friendly_pos[0] - ememy_pos[0]) + abs(friendly_pos[1] - ememy_pos[1])
-                print("Enemy found at {0} and {1} jumps away".format(ememy_pos, dist))
-                if not closest_ememy:
-                    closest_ememy = ememy_pos
+                enemy_pos = (col_index, row_index)
+                dist = abs(friendly_pos[0] - enemy_pos[0]) + abs(friendly_pos[1] - enemy_pos[1])
+                print("Enemy found at {0} and {1} jumps away".format(enemy_pos, dist))
+                if not closest_enemy:
+                    closest_enemy = enemy_pos
                     closest_dist = dist
                 if closest_dist > dist:
-                    closest_ememy = ememy_pos
+                    closest_enemy = enemy_pos
                     closest_dist = dist
-    return closest_ememy, closest_dist
+    return closest_enemy, closest_dist
 
 
 def run():
@@ -125,8 +131,8 @@ def run():
     try:
         metrix = build_metrix()
         print_metrix(metrix=metrix)
-        closest_ememy, closest_dist = find_closest_ememy(metrix=metrix)
-        print("Closest ememy is {0} and {1} jumps away".format(closest_ememy, closest_dist))
+        closest_enemy, closest_dist = find_closest_enemy(metrix=metrix)
+        print("Closest enemy is {0} and {1} jumps away".format(closest_enemy, closest_dist))
     except ClosestEnemyException as ex:
         print("Something went wrong - {0}".format(ex))
 
