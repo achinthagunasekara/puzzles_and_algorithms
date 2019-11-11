@@ -78,7 +78,7 @@ def get_friendly_pos(metrix):
     return None
 
 
-def get_enemy_pos(metrix):
+def get_enemies(metrix):
     """
     Get the enemy positions.
     Args:
