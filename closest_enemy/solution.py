@@ -63,12 +63,21 @@ def print_metrix(metrix):
         print(' '.join(row))
 
 
+def get_friendly_pos(metrix):
+    """
+    Get the position of the friendly.
+    Args:
+        metrix (list): List of lists (metrix).
+    """
+
+
 def find_closest_enemy(metrix):
     """
     Find the closest enemy in a given metrix.
     Args:
         metrix (list): List of lists (metrix).
     """
+    friendly_pos = get_friendly_pos(metrix=metrix)
 
 
 def run():
