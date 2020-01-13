@@ -19,5 +19,9 @@ def get_user_input():
         return get_user_input()
     return user_input
 
+
+def print_chess_board():
+    pass
+
 if __name__ == '__main__':
     print(get_user_input())
