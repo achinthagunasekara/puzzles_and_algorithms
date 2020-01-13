@@ -28,3 +28,4 @@ def print_chess_board():
 
 if __name__ == '__main__':
     print(get_user_input())
+    print_chess_board()
