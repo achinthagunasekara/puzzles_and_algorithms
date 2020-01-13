@@ -24,7 +24,7 @@ def print_chess_board():
     """
     Print the chess board  and show where the pieces are
     """
-    pass
+
 
 if __name__ == '__main__':
     print(get_user_input())
