@@ -21,6 +21,9 @@ def get_user_input():
 
 
 def print_chess_board():
+    """
+    Print the chess board  and show where the peices are
+    """
     pass
 
 if __name__ == '__main__':
