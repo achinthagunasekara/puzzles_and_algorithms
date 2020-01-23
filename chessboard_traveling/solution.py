@@ -25,7 +25,9 @@ def print_chess_board():
     Print the chess board  and show where the pieces are
     """
     for row in range(0, 8):
-        print(row)
+        for col in range(0, 8):
+            print(col)
+        print('\n')
 
 
 if __name__ == '__main__':
