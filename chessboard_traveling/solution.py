@@ -25,9 +25,10 @@ def print_chess_board():
     Print the chess board  and show where the pieces are
     """
     for row in range(0, 8):
+        row = ""
         for col in range(0, 8):
-            print(col)
-        print('\n')
+            row = "{0} ".format(col)
+        print("{0}\n".format(row))
 
 
 if __name__ == '__main__':
