@@ -27,7 +27,7 @@ def print_chess_board():
     for row in range(0, 8):
         row = ""
         for col in range(0, 8):
-            row = "{0} ".format(col)
+            row = "{0} {1}".format(row, col)
         print("{0}\n".format(row))
 
 
