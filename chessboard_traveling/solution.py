@@ -17,6 +17,8 @@ def get_user_input():
     if not pattern.match(user_input):
         print('invalid input. please use the pattern (1 2)(5 2)')
         return get_user_input()
+    user_inputs = re.search('(.*)(.*)', user_input)
+    print(user_inputs.group(1))
     return user_input
 
 
@@ -32,5 +34,5 @@ def print_chess_board():
 
 
 if __name__ == '__main__':
-    #print(get_user_input())
+    print(get_user_input())
     print_chess_board()
