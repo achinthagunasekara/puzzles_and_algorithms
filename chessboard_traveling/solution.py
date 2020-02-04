@@ -18,17 +18,24 @@ def get_user_input():
         print('invalid input. please use the pattern (1 2)(5 2)')
         return get_user_input()
     user_inputs = re.search(r'\((.*)\)\((.*)\)', user_input)
-    return user_inputs.group(1).split(' '), user_inputs.group(2).split(' ')
+    pos1 = list(map(int, user_inputs.group(1).split(' ')))
+    pos2 = list(map(int, user_inputs.group(2).split(' ')))
+    return pos1, pos2
 
 
 def print_chess_board(pos1, pos2):
     """
     Print the chess board  and show where the pieces are.
     """
-    for col in range(0, 8):
+    for row in range(1, 9):
         row_graphic = ""
-        for row in range(0, 8):
-            row_graphic = "{0} ▇".format(row_graphic)
+        for col in range(1, 9):
+            #print("Pos_G {0}".format(pos1))
+            #print("Pos_C ({0} {1})".format(row, col))
+            if pos1[0] == row and pos1[1] == col:
+                row_graphic = "{0} X".format(row_graphic)
+            else:
+                row_graphic = "{0} ▇".format(row_graphic)
         print(row_graphic)
 
 
