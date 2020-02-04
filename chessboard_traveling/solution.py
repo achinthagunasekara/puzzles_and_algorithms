@@ -17,8 +17,8 @@ def get_user_input():
     if not pattern.match(user_input):
         print('invalid input. please use the pattern (1 2)(5 2)')
         return get_user_input()
-    user_inputs = re.search("(.*)(.*)", user_input)
-    print("input is {0}".format(user_inputs.group(0)))
+    user_inputs = re.search(r'\((.*)\)\((.*)\)', user_input)
+    print(user_inputs.group(2))
     return user_input
 
 
