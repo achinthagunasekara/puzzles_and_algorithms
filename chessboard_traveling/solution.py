@@ -18,8 +18,7 @@ def get_user_input():
         print('invalid input. please use the pattern (1 2)(5 2)')
         return get_user_input()
     user_inputs = re.search(r'\((.*)\)\((.*)\)', user_input)
-    print(user_inputs.group(2))
-    return user_input
+    return user_inputs.group(1).split(' '), user_inputs.group(2).split(' ')
 
 
 def print_chess_board():
@@ -33,6 +32,13 @@ def print_chess_board():
         print(row)
 
 
-if __name__ == '__main__':
-    get_user_input()
+def run():
+    """
+    Run the puzzle.
+    """
+    pos1, pos2 = get_user_input()
     print_chess_board()
+
+
+if __name__ == '__main__':
+    run()
