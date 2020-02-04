@@ -21,9 +21,9 @@ def get_user_input():
     return user_inputs.group(1).split(' '), user_inputs.group(2).split(' ')
 
 
-def print_chess_board():
+def print_chess_board(pos1, pos2):
     """
-    Print the chess board  and show where the pieces are
+    Print the chess board  and show where the pieces are.
     """
     for _ in range(0, 8):
         row = ""
