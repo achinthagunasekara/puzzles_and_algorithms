@@ -37,7 +37,7 @@ def run():
     Run the puzzle.
     """
     pos1, pos2 = get_user_input()
-    print_chess_board()
+    print_chess_board(pos1=pos1, pos2=pos2)
 
 
 if __name__ == '__main__':
