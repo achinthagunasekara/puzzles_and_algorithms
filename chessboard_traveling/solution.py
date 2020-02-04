@@ -25,11 +25,11 @@ def print_chess_board(pos1, pos2):
     """
     Print the chess board  and show where the pieces are.
     """
-    for _ in range(0, 8):
-        row = ""
-        for _ in range(0, 8):
-            row = "{0} ▇".format(row)
-        print(row)
+    for col in range(0, 8):
+        row_graphic = ""
+        for row in range(0, 8):
+            row_graphic = "{0} ▇".format(row_graphic)
+        print(row_graphic)
 
 
 def run():
