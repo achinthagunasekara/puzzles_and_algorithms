@@ -33,7 +33,7 @@ def print_chess_board(pos1, pos2):
             #print("Pos_G {0}".format(pos1))
             #print("Pos_C ({0} {1})".format(row, col))
             if (pos1[0] == row and pos1[1] == col) or (pos2[0] == row and pos2[1] == col):
-                row_graphic = "{0} X".format(row_graphic)
+                row_graphic = "{0} ¶".format(row_graphic)
             else:
                 row_graphic = "{0} ▇".format(row_graphic)
         print(row_graphic)
