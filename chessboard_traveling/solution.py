@@ -39,7 +39,11 @@ def print_chess_board(pos1, pos2):
         print(row_graphic)
 
 
-def calculate_path(pos1, pos2):
+def calculate_paths(pos1, pos2):
+    """
+    Calculate paths from pos1 to pos2.
+    """
+
 
 def run():
     """
