@@ -39,6 +39,8 @@ def print_chess_board(pos1, pos2):
         print(row_graphic)
 
 
+def calculate_path(pos1, pos2):
+
 def run():
     """
     Run the puzzle.
