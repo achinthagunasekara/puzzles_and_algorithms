@@ -43,6 +43,11 @@ def calculate_paths(pos1, pos2):
     """
     Calculate paths from pos1 to pos2.
     """
+    for row in range(1, 9):
+        for col in range(1, 9):
+            if (pos1[0] == row and pos1[1] == col) or \
+                    (pos2[0] == row and pos2[1] == col):
+                        print("Found item")
 
 
 def run():
